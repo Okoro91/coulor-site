@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+.sign-in-btn, .sign-up-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.sign-up-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.sign-up-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #fff;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.start-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.start-btn:hover {
+    background-color: #0056b3;
+}
+
+.explore-link {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.explore-link:hover {
+    text-decoration: underline;
+}
+
+.product-hunt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff3e6;
+    padding: 10px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.product-hunt span {
+    color: #ff6200;
+    font-weight: bold;
+}
+
+.product-hunt p {
+    margin: 0;
+    color: #333;
+}
+
+.hero-image .palette-grid {
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(90deg, #f5f5d5 20%, #d5f5e3 40%, #e6d5f5 60%, #f5d5e6 80%, #d5e6f5 100%);
+    border-radius: 8px;
+}
+
+/* Apps and Extensions Section */
+.apps-extensions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+}
+
+.app-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.app-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.app-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.new-tag {
+    color: #ff00ff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Trusted By Section */
+.trusted-by {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.trusted-by h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logos img {
+    height: 40px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 40px;
+    border-top: 1px solid #eee;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    color: #333;
+}
+
+.footer-column .new-tag {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-image .palette-grid {
+        width: 100%;
+        height: 200px;
+    }
+
+    .apps-extensions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+    }
+}
