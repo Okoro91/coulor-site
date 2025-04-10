@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -25,6 +25,10 @@ header {
     font-size: 24px;
     font-weight: bold;
     color: #333;
+}
+
+a {
+    text-decoration: none;
 }
 
 nav ul {
@@ -44,7 +48,8 @@ nav a:hover {
     color: #333;
 }
 
-.sign-in-btn, .sign-up-btn {
+.sign-in-btn,
+.sign-up-btn {
     padding: 8px 16px;
     border-radius: 4px;
 }
@@ -59,7 +64,7 @@ nav a:hover {
     color: #fff;
 }
 
-/* Hero Section */
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -132,14 +137,13 @@ nav a:hover {
     color: #333;
 }
 
-.hero-image .palette-grid {
-    width: 400px;
-    height: 300px;
-    background: linear-gradient(90deg, #f5f5d5 20%, #d5f5e3 40%, #e6d5f5 60%, #f5d5e6 80%, #d5e6f5 100%);
-    border-radius: 8px;
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+
 }
 
-/* Apps and Extensions Section */
 .apps-extensions {
     display: flex;
     justify-content: center;
@@ -180,7 +184,7 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* Trusted By Section */
+
 .trusted-by {
     text-align: center;
     padding: 40px;
@@ -205,7 +209,7 @@ nav a:hover {
     opacity: 0.7;
 }
 
-/* Footer */
+
 footer {
     background-color: #fff;
     padding: 40px;
@@ -255,7 +259,7 @@ footer {
     margin-left: 5px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
