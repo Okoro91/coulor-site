@@ -13,19 +13,19 @@ body {
 
 
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 25px 20px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.075) 0 1px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
 
 a {
     text-decoration: none;
@@ -43,22 +43,27 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #666;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 nav a:hover {
-    color: #333;
+    color: #6646e6;
 }
 
-.sign-in-btn,
-.sign-up-btn {
-    padding: 8px 16px;
-    border-radius: 4px;
+.go-pro {
+    color: #FF0096;
 }
 
+
+.sign-in-btn {
+    border-left: 1px solid #e0dada;
+    padding: 9px 15px; 
+}
 .sign-up-btn {
     background-color: #007bff;
     color: #fff;
+    border-radius: 4px;
+    padding: 8px 16px;
 }
 
 .sign-up-btn:hover {
@@ -66,17 +71,33 @@ nav a:hover {
     color: #fff;
 }
 
+main {
+    width: 100%;
+    padding: 120px 35px;
+    background-color: #fff;
+}
 
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 40px;
-    background-color: #fff;
+    flex-direction: row;
+    width: 100%;
+    height: 580px;
+    margin-bottom: 85px;
+}
+
+.mobile-img {
+    display: none;
 }
 
 .hero-content {
-    max-width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 640px + 110px);
 }
 
 .hero-content h1 {
@@ -84,12 +105,14 @@ nav a:hover {
     font-weight: bold;
     line-height: 1.2;
     margin-bottom: 20px;
+    max-width: 400px;
 }
 
 .hero-content p {
     font-size: 18px;
     color: #666;
     margin-bottom: 30px;
+    max-width: 400px;
 }
 
 .start-btn {
@@ -120,48 +143,52 @@ nav a:hover {
 }
 
 .product-hunt {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     background-color: #fff3e6;
-    padding: 10px;
+    padding: -10px;
     border-radius: 4px;
-    width: fit-content;
+    width: 100%;
 }
 
-.product-hunt span {
-    color: #ff6200;
-    font-weight: bold;
-}
 
-.product-hunt p {
-    margin: 0;
-    color: #333;
+
+.hero-image {
+        width: 650px;
+        height: 425px;
+        right: -110px;
+        position: absolute;
+        top: 180px;
+        overflow: hidden;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
     object-fit: cover;
-
 }
 
 .apps-extensions {
     display: flex;
     justify-content: center;
     gap: 20px;
+    width: 100%;
     padding: 40px;
-    background-color: #f9f9f9;
     flex-wrap: wrap;
+    background-color: #fff;
 }
 
 .app-card {
-    background-color: #fff;
+position: relative;    
+    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     width: 200px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-card:hover  {
+    background-color: #bda0ba;
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 
 .app-card img {
@@ -173,6 +200,7 @@ img {
 .app-card h3 {
     font-size: 18px;
     margin-bottom: 10px;
+    color: rgb(43, 42, 42);
 }
 
 .app-card p {
@@ -181,9 +209,13 @@ img {
 }
 
 .new-tag {
+    position: absolute;
+    right: 50px;
+    top: 10px;
     color: #ff00ff;
     font-size: 12px;
     font-weight: bold;
+
 }
 
 
@@ -198,17 +230,22 @@ img {
     margin-bottom: 20px;
 }
 
-.logos ul {
+.trusted-logos ul {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
 
-.logos img {
+.trusted-logos img {
     height: 40px;
     filter: grayscale(100%);
     opacity: 0.7;
+}
+
+.trusted-logos img:hover {
+    transform: scale(1.7);
+    transition: 0.3s;
 }
 
 
@@ -222,6 +259,7 @@ footer {
 .footer-columns {
     display: flex;
     justify-content: space-between;
+    align-items: start;
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -229,6 +267,10 @@ footer {
 
 .footer-column {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-width: 200px;
     margin-bottom: 20px;
 }
@@ -241,6 +283,7 @@ footer {
 
 .footer-column ul {
     list-style: none;
+    text-align: center;
 }
 
 .footer-column ul li {
@@ -254,46 +297,71 @@ footer {
 }
 
 .footer-column ul li a:hover {
-    color: #333;
+    color: #7ca3dd;
 }
 
-.footer-column .new-tag {
+.footer-column .new {
     display: inline-block;
     margin-left: 5px;
+    background-color: #FFF2E7;
+    font-size: 8px;
+    color: #CC660A;
+    padding: 4px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+    line-height: 1em;
 }
 
 
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 40px;
-    }
 
-    .hero-image .palette-grid {
-        width: 100%;
-        height: 200px;
-    }
 
-    .apps-extensions {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-columns {
-        flex-direction: column;
-    }
+#footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 58px;
+    border-top: 1px solid black ;
+    padding-top: 20px;
 }
 
+#footer-credits p {
+    font-size: 14px;
+    font-weight: 700;
+    color: #242222;
+}
+#footer-credits p a {
+    color: #242222;
+}
+
+#footer-credits p a:hover {
+    color: #669fd8;
+}
+
+
+
+.footer-socials ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.social-icons {
+    display: inline-block;
+    color: #242222;
+}
+
+.social-icons:hover {
+    color: #0056b3;
+}
 
 
 .ad-container {
     position: fixed;
-    bottom: 0;
+    bottom: 95px;
     right: 0;
     width: 300px;
     height: 120px;
@@ -306,6 +374,7 @@ footer {
     display: flex;
     gap: 5px;
 }
+
 
 
 .text-content h5 {
@@ -331,3 +400,88 @@ footer {
 .hide-btn:hover {
     color: #333;
 }
+
+@media (max-width: 768px) {
+
+    header nav {
+        display: none;
+    }
+
+    header {
+        justify-content: center;
+    }
+    main {
+        padding-top: 390px;
+    }
+
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 135px;
+        padding-bottom: 95px;
+    }
+    .mobile-img {
+        display: block;
+        margin-bottom: 65px;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .apps-extensions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 28px;
+    }
+
+    #footer-bottom {
+        flex-direction: column;
+        height: 78px;
+    }
+    
+.ad-container {
+    bottom: 95px;
+    width: 250px;
+    height: 95px;
+}
+
+.text-content h5 {
+    font-size: 12px;
+    line-height: 1.1;
+    margin-bottom: 9px;
+}
+
+.text-content p {
+    font-size: 8px;
+
+}
+
+.hide-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+}
+}
+
+
