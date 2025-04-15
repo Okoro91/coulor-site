@@ -26,6 +26,9 @@ header {
     box-shadow: rgba(0, 0, 0, 0.075) 0 1px;
 }
 
+.nav-bar {
+    display: none;
+}
 
 a {
     text-decoration: none;
@@ -411,8 +414,14 @@ footer {
         display: none;
     }
 
-    header {
-        justify-content: center;
+    .nav-bar {
+        display: block;
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 140px;
+        margin: 0 auto;
     }
 
     main {
